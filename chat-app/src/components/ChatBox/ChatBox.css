@@ -1,0 +1,75 @@
+@keyframes slideUp {
+    from {
+        opacity: 0; /* Começa invisível */
+        transform: translateY(100%); /* Começa fora da tela (abaixo) */
+    }
+    to {
+        opacity: 1; /* Fica visível */
+        transform: translateY(0); /* Volta para a posição original */
+    }
+}
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    right: 0;
+    height: 100%;              
+    width: 650px;
+    overflow-y: auto;
+    opacity: 0; /* Inicia invisível */
+    transform: translateY(20px); /* Move para baixo */
+    animation: slideUp 2s forwards; /* Animação para subir */
+}
+
+.chat-log {
+    flex: 1; /* Faz o log de chat ocupar todo o espaço restante */
+    overflow-y: auto; /* Permite rolagem vertical */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #f9f9f9; /* Cor de fundo para o log de chat */
+    border-top: 1px solid #ddd; /* Borda superior opcional para separação */
+}
+
+.chat-input-holder {
+    padding: 10px; /* Espaçamento ao redor do campo de entrada */
+    background-color: #fff; /* Cor de fundo para o input */
+    border-top: 1px solid #ddd; /* Borda superior para separação */
+}
+
+.input-text {
+    width: 97%; 
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    font-size: 16px; 
+}
+
+
+.close {
+    display: flex;
+    justify-content: end;
+    right: 0;
+    text-align: end;
+    padding: 10px;
+}
+
+.fechado {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    padding: 2px;
+    background-color: #ccc;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.fechado:hover {
+    opacity: 0.7;
+}
+
